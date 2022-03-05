@@ -1,6 +1,6 @@
 {
   "name": "stitches-normalize",
-  "version": "0.0.1",
+  "version": "0.1.0",
   "description": "@sindresorhus's modern-normalize.css as a plug-and-play JavaScript object compatible with Stitches.",
   "license": "MIT",
   "author": {

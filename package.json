@@ -8,6 +8,13 @@
     "email": "jake@jarv.is",
     "url": "https://github.com/jakejarvis"
   },
+  "contributors": [
+    {
+      "name": "Sindre Sorhus",
+      "email": "sindresorhus@gmail.com",
+      "url": "https://sindresorhus.com"
+    }
+  ],
   "repository": {
     "type": "git",
     "url": "https://github.com/jakejarvis/stitches-normalize.git"
@@ -24,5 +31,11 @@
   "peerDependencies": {
     "@stitches/react": "1.x"
   },
-  "keywords": []
+  "keywords": [
+    "stitches",
+    "css-in-js",
+    "css",
+    "normalize",
+    "reset"
+  ]
 }

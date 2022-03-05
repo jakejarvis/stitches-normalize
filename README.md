@@ -1,3 +1,9 @@
-# stitches-normalize
+# 🧵 stitches-normalize
 
-@sindresorhus's modern-normalize.css as a plug-and-play JavaScript object compatible with Stitches.
+**🚧 Work in progress!**
+
+@sindresorhus's [modern-normalize.css](https://github.com/sindresorhus/modern-normalize) as a plug-and-play JavaScript object compatible with Stitches.
+
+## License
+
+MIT

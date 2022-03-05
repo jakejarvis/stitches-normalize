@@ -1,0 +1,28 @@
+{
+  "name": "stitches-normalize",
+  "version": "0.0.0",
+  "description": "@sindresorhus's modern-normalize.css as a plug-and-play JavaScript object compatible with Stitches.",
+  "license": "MIT",
+  "author": {
+    "name": "Jake Jarvis",
+    "email": "jake@jarv.is",
+    "url": "https://github.com/jakejarvis"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/jakejarvis/stitches-normalize.git"
+  },
+  "files": [
+    "index.js",
+    "index.d.ts"
+  ],
+  "main": "index.js",
+  "types": "./index.d.ts",
+  "devDependencies": {
+    "@stitches/react": "^1.2.7"
+  },
+  "peerDependencies": {
+    "@stitches/react": "1.x"
+  },
+  "keywords": []
+}

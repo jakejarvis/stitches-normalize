@@ -1,9 +1,9 @@
+/*! stitches-normalize | MIT License | https://github.com/jakejarvis/stitches-normalize */
 /*! modern-normalize v1.1.0 | MIT License | https://github.com/sindresorhus/modern-normalize */
-// ...as of this commit:
-// https://github.com/sindresorhus/modern-normalize/blob/b59ec0d3d8654cbb6843bc9ea45aef5f1d680108/modern-normalize.css
 
-/** @type {Record<string, import("@stitches/react").CSSProperties>[]} */
-module.exports = [
+import type * as Stitches from "@stitches/react";
+
+const normalizeCss: Record<string, Stitches.CSSProperties>[] = [
   {
     "*, ::before, ::after": {
       boxSizing: "border-box",
@@ -11,6 +11,7 @@ module.exports = [
     html: {
       lineHeight: 1.15,
       tabSize: 4,
+      // @ts-ignore
       WebkitTextSizeAdjust: "100%",
     },
     body: {
@@ -60,6 +61,7 @@ module.exports = [
       textTransform: "none",
     },
     "button, [type='button'], [type='reset'], [type='submit']": {
+      // @ts-ignore
       WebkitAppearance: "button",
     },
     "::-moz-focus-inner": {
@@ -83,9 +85,11 @@ module.exports = [
     },
     "[type='search']": {
       outlineOffset: -2,
+      // @ts-ignore
       WebkitAppearance: "textfield",
     },
     "::-webkit-search-decoration": {
+      // @ts-ignore
       WebkitAppearance: "none",
     },
     "::-webkit-inner-spin-button, ::-webkit-outer-spin-button": {
@@ -93,7 +97,10 @@ module.exports = [
     },
     "::-webkit-file-upload-button": {
       font: "inherit",
+      // @ts-ignore
       WebkitAppearance: "button",
     },
   },
 ];
+
+export default normalizeCss;

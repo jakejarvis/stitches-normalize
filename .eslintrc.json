@@ -1,0 +1,21 @@
+{
+  "extends": [
+    "@jakejarvis/eslint-config",
+    "plugin:@typescript-eslint/recommended"
+  ],
+  "plugins": [
+    "@typescript-eslint"
+  ],
+  "parser": "@typescript-eslint/parser",
+  "env": {
+    "node": true,
+    "browser": false
+  },
+  "rules": {
+    "quote-props": "off",
+    "@typescript-eslint/ban-ts-comment": "off"
+  },
+  "ignorePatterns": [
+    "dist/**"
+  ]
+}

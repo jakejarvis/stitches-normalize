@@ -1,8 +1,9 @@
 {
   "name": "stitches-normalize",
   "version": "0.1.0",
-  "description": "@sindresorhus's modern-normalize.css as a plug-and-play JavaScript object compatible with Stitches.",
   "license": "MIT",
+  "description": "@sindresorhus's modern-normalize.css as a plug-and-play JavaScript object compatible with Stitches.",
+  "repository": "jakejarvis/stitches-normalize",
   "author": {
     "name": "Jake Jarvis",
     "email": "jake@jarv.is",
@@ -15,21 +16,39 @@
       "url": "https://sindresorhus.com"
     }
   ],
-  "repository": {
-    "type": "git",
-    "url": "https://github.com/jakejarvis/stitches-normalize.git"
-  },
+  "type": "module",
   "files": [
-    "index.js",
-    "index.d.ts"
+    "dist"
   ],
-  "main": "index.js",
-  "types": "./index.d.ts",
+  "source": "./src/index.ts",
+  "main": "./dist/index.cjs",
+  "module": "./dist/index.js",
+  "exports": {
+    "require": "./dist/index.cjs",
+    "import": "./dist/index.js"
+  },
+  "types": "./dist/index.d.ts",
+  "scripts": {
+    "build": "microbundle --no-sourcemap --no-compress --format cjs,esm",
+    "test": "eslint .",
+    "prepublishOnly": "yarn build"
+  },
   "devDependencies": {
-    "@stitches/react": "^1.2.7"
+    "@jakejarvis/eslint-config": "*",
+    "@stitches/react": "^1.2.7",
+    "@typescript-eslint/eslint-plugin": "^5.15.0",
+    "@typescript-eslint/parser": "^5.15.0",
+    "eslint": "^8.11.0",
+    "microbundle": "^0.14.2",
+    "typescript": "^4.6.2"
   },
   "peerDependencies": {
     "@stitches/react": "1.x"
+  },
+  "peerDependenciesMeta": {
+    "@stitches/react": {
+      "optional": true
+    }
   },
   "keywords": [
     "stitches",

@@ -1,7 +1,7 @@
 # 🧵 stitches-normalize
 
 [![npm](https://img.shields.io/npm/v/stitches-normalize)](https://www.npmjs.com/package/stitches-normalize)
-[![MIT License](https://img.shields.io/github/license/jakejarvis/stitches-normalize?color=violet)](LICENSE)
+[![MIT License](https://img.shields.io/github/license/jakejarvis/stitches-normalize)](LICENSE)
 
 @sindresorhus's [**modern-normalize.css**](https://github.com/sindresorhus/modern-normalize) as a plug-and-play JavaScript object compatible with Stitches.
 
@@ -23,10 +23,15 @@ You can read more about setting that file up [in Stitches' awesome documentation
 import { globalCss } from "./stitches.config";
 import normalizeCss from "stitches-normalize";
 
-const globalStyles = globalCss(...normalizeCss, {
+const globalStyles = globalCss(
+  ...normalizeCss({
+    // default options, see below:
+    fontFamilies: true,
+    webkitPrefixes: true,
+    mozPrefixes: true,
+  }), {
   // you can put the rest of your global styles here if necessary.
   // these rules will override stitches-normalize's.
-
   body: {
     fontFamily: "'Comic Sans MS', sans-serif",
   },
@@ -37,6 +42,35 @@ const App = () => {
   return <h1>Hello, normalized world!</h1>;
 };
 ```
+
+## API
+
+### normalizeCss(options?)
+
+#### options
+
+Type: `object`
+
+##### systemFonts
+
+Type: `boolean`\
+Default: `true`
+
+Include the [default system font stacks](https://github.com/sindresorhus/modern-normalize/issues/3) (sans-serif fonts for `html`, monospace fonts for `code`, `kbd`, `samp`, and `pre`.)
+
+##### webkitPrefixes
+
+Type: `boolean`\
+Default: `true`
+
+Include non-standard WebKit compatibility rules for older Safari versions on iOS and macOS.
+
+##### mozPrefixes
+
+Type: `boolean`\
+Default: `true`
+
+Include non-standard Mozilla compatibility rules for older Firefox versions.
 
 ## License
 

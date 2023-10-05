@@ -50,6 +50,9 @@
       "optional": true
     }
   },
+  "engines": {
+    "node": ">=6"
+  },
   "keywords": [
     "stitches",
     "css-in-js",

@@ -1,5 +1,5 @@
 /*! stitches-normalize | MIT License | https://github.com/jakejarvis/stitches-normalize */
-/*! modern-normalize v1.1.0 | MIT License | https://github.com/sindresorhus/modern-normalize */
+/*! modern-normalize v2.0.0 | MIT License | https://github.com/sindresorhus/modern-normalize */
 
 import type * as Stitches from "@stitches/react";
 
@@ -133,7 +133,7 @@ const normalizeCss = (options: Options = {}): Record<string, Stitches.CSSPropert
 
   // append default system font stacks
   if (options.systemFonts) {
-    baseStyles["body"].fontFamily = "system-ui, -apple-system, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif, 'Apple Color Emoji', 'Segoe UI Emoji'";
+    baseStyles["html"].fontFamily = "system-ui, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif, 'Apple Color Emoji', 'Segoe UI Emoji'";
     baseStyles["code, kbd, samp, pre"].fontFamily = "ui-monospace, SFMono-Regular, Consolas, 'Liberation Mono', Menlo, monospace";
   }
 

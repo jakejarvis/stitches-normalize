@@ -26,7 +26,7 @@ import normalizeCss from "stitches-normalize";
 const globalStyles = globalCss(
   ...normalizeCss({
     // default options, see below:
-    fontFamilies: true,
+    systemFonts: true,
     webkitPrefixes: true,
     mozPrefixes: true,
   }), {
